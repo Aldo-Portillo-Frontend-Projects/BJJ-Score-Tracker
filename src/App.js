@@ -8,10 +8,14 @@ function App() {
     <div className="App">
       <h1>BJJ Score Tracker</h1>
       <Countdown date={Date.now() + 300000} />
-      
+
       <Player player="Player 1" />
       <Player player="Player 2" />
 
+      <div className='game-buttons'>
+        <button>Pause Timer</button>
+        <button>New Game</button>
+      </div>
       
     </div>
   );
