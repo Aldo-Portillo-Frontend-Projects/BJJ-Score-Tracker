@@ -4,13 +4,17 @@
   align-items: center;
 }
 
-.buttons{
+.point-buttons{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 
-button{
+.point-buttons > button{
   height: 75px;
   width: 100px;
+}
+
+.game-buttons{
+  padding: 25px
 }
