@@ -13,11 +13,15 @@ export default function Player(props) {
             <h3>{props.player}</h3>
             <h2>{score}</h2>
             <div className='buttons'>
-                <button onClick={()=> modifyScore(4)}>Mount or Back Grab</button>
-                <button onClick={()=> modifyScore(3)}>Guard pass</button>
-                <button onClick={()=> modifyScore(2)}>Take Down, Sweep, or Knee on belly</button>
+                <button onClick={()=> modifyScore(4)}>Mount</button>
+                <button onClick={()=> modifyScore(4)}>Back Grab</button>
+                <button onClick={()=> modifyScore(3)}>Guard Pass</button>
+                <button onClick={()=> modifyScore(2)}>Take Down</button>
+                <button onClick={()=> modifyScore(2)}>Sweep</button>
+                <button onClick={()=> modifyScore(2)}>Knee on Belly</button>
                 <button onClick={()=> modifyScore(1)}>Advantage</button>
                 <button onClick={()=> modifyScore(-1)}>Penalty</button>
+                <button onClick={() => setScore(100)}>Submission</button>
             </div>
         </div>
     )
