@@ -12,7 +12,7 @@ export default function Player(props) {
         <div className='playerContainer'>
             <h3>{props.player}</h3>
             <h2>{score}</h2>
-            <div className='buttons'>
+            <div className='point-buttons'>
                 <button onClick={()=> modifyScore(4)}>Mount</button>
                 <button onClick={()=> modifyScore(4)}>Back Grab</button>
                 <button onClick={()=> modifyScore(3)}>Guard Pass</button>
