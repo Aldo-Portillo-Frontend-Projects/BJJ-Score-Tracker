@@ -1,22 +1,26 @@
 import './App.css';
-import Player from './Player';
+import Game from './components/Game'
+import Setup from './components/Setup'
 
-import Countdown from 'react-countdown';
+import {BrowserRouter as Router, Link, Routes, Route} from "react-router-dom"
+
+
 
 function App() {
   return (
+    
     <div className="App">
       <h1>BJJ Score Tracker</h1>
-      <Countdown date={Date.now() + 300000} />
+      <Router>
+      <Link to="/">Setup</Link>
+      <Link to="/game">Game</Link>
 
-      <Player player="Player 1" />
-      <Player player="Player 2" />
-
-      <div className='game-buttons'>
-        <button>Pause Timer</button>
-        <button>New Game</button>
-      </div>
-      
+            <Routes>
+            <Route exact path="/" element={<Setup />}></Route>
+            <Route path="/Game" element={<Game />}></Route>
+                
+            </Routes>
+      </Router>
     </div>
   );
 }
