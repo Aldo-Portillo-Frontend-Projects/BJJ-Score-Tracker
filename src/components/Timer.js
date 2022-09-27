@@ -4,7 +4,7 @@ function TimerInput (props) {
     return (
         <div>
             <h3>Set Timer</h3>
-            <input type="number" required minutes={props.minutes} onChange={props.handleChange}/>
+            <input disabled={props.disable} type="number" required minutes={props.minutes} onChange={props.handleChange}/>
         </div>
     )
 }
@@ -20,7 +20,7 @@ function Timer (props) {
 function StartTime (props) {
     return (
         <div>
-            <button onClick={props.handleClick}>Start</button>
+            <button disabled={props.disable} onClick={props.handleClick}>Start</button>
         </div>
     )
 }

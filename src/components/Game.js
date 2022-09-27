@@ -6,13 +6,19 @@ function Game () {
 
     const [seconds, setSeconds] = React.useState('00');
     const [minutes, setMinutes] = React.useState('00')
+    const [timerActive, setTimerActive] = React.useState(false)
+
 
     let secondsRemaining
     let intervalHandle 
 
     function handleChange (event) {
-        console.log(event.target.value)
-        setMinutes(event.target.value)
+        if (event.target.value < 10){
+            setMinutes("0"+event.target.value)
+        } else {
+            setMinutes(event.target.value)
+        }
+        
         
     }
 
@@ -33,24 +39,27 @@ function Game () {
 
         if (min === 0 & sec === 0) {
             clearInterval(intervalHandle);
+            setTimerActive(false)
         }
 
         secondsRemaining--
     }
 
     function startCountDown() {
+        setTimerActive(true)
         intervalHandle = setInterval(tick, 1000);
 
         let time = minutes;
-
         secondsRemaining = time * 60;
     }
     return (
         <div className='game'>
+            <div className='timer'>
+                <TimerInput disable={timerActive} minutes={minutes} handleChange={handleChange}/>
+                <Timer minutes={minutes} seconds={seconds}/>
+                <StartTime disable={timerActive} handleClick={startCountDown}/>
+            </div>
             
-            <TimerInput minutes={minutes} handleChange={handleChange}/>
-            <Timer minutes={minutes} seconds={seconds}/>
-            <StartTime handleClick={startCountDown}/>
 
             <Player player="Player 1" />
             <Player player="Player 2" />
