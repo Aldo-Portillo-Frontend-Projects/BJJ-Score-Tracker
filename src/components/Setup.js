@@ -14,6 +14,7 @@ function Setup () {
             <label>Time (in minutes):
                 <input type="number" />
             </label>
+            <button>Submit</button>
             </form>
         </div>
         
