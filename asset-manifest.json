@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/BJJ-Score-Tracker/static/css/main.d7a3bc70.css",
-    "main.js": "/BJJ-Score-Tracker/static/js/main.b3e326cb.js",
+    "main.css": "/BJJ-Score-Tracker/static/css/main.b0f5c5eb.css",
+    "main.js": "/BJJ-Score-Tracker/static/js/main.54fafad8.js",
     "index.html": "/BJJ-Score-Tracker/index.html",
-    "main.d7a3bc70.css.map": "/BJJ-Score-Tracker/static/css/main.d7a3bc70.css.map",
-    "main.b3e326cb.js.map": "/BJJ-Score-Tracker/static/js/main.b3e326cb.js.map"
+    "main.b0f5c5eb.css.map": "/BJJ-Score-Tracker/static/css/main.b0f5c5eb.css.map",
+    "main.54fafad8.js.map": "/BJJ-Score-Tracker/static/js/main.54fafad8.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7a3bc70.css",
-    "static/js/main.b3e326cb.js"
+    "static/css/main.b0f5c5eb.css",
+    "static/js/main.54fafad8.js"
   ]
 }
