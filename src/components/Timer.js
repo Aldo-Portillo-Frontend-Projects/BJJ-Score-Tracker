@@ -1,28 +1,40 @@
 import React from 'react'
+import {useTimer} from 'react-timer-hook'
 
-function TimerInput (props) {
-    return (
-        <div>
-            <h3>Set Timer</h3>
-            <input disabled={props.disable} type="number" required minutes={props.minutes} onChange={props.handleChange}/>
-        </div>
-    )
+function MyTimer({ expiryTimestamp }) {
+    const {
+      seconds,
+      minutes,
+      start,
+      pause,
+      resume,
+    } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called'), autoStart: false });
+
+
+  return (
+    <div style={{textAlign: 'center'}}>
+      <div style={{fontSize: '100px'}}>
+        <span>{minutes}</span>:<span>{seconds}</span>
+      </div>
+      <button onClick={start}>Start</button>
+      <button onClick={pause}>Pause</button>
+      <button onClick={resume}>Resume</button>
+    </div>
+  );
 }
+
 
 
 function Timer (props) {
-    return (
-        <div>
-            <h1>{props.minutes}:{props.seconds}</h1>
-        </div>
-    )
-}
-function StartTime (props) {
-    return (
-        <div>
-            <button disabled={props.disable} onClick={props.handleClick}>Start</button>
-        </div>
-    )
+    const time = new Date();
+    console.log(props.time)
+    time.setSeconds(time.getSeconds() + props.time);
+
+  return (
+    <div>
+      {props.timeSet && <MyTimer expiryTimestamp={time} />}
+    </div>
+  );
 }
 
-export {TimerInput, Timer, StartTime}
+export default Timer

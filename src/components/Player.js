@@ -21,7 +21,7 @@ export default function Player(props) {
                 <button onClick={()=> modifyScore(2)}>Knee on Belly</button>
                 <button onClick={()=> modifyScore(1)}>Advantage</button>
                 <button onClick={()=> modifyScore(-1)}>Penalty</button>
-                <button onClick={() => setScore(100)}>Submission</button>
+                <button onClick={() => setScore(0)}>Clear Score</button>
             </div>
         </div>
     )
