@@ -19,9 +19,8 @@ export default function Player(props) {
                 <button onClick={()=> modifyScore(2)}>Take Down</button>
                 <button onClick={()=> modifyScore(2)}>Sweep</button>
                 <button onClick={()=> modifyScore(2)}>Knee on Belly</button>
-                <button onClick={()=> modifyScore(1)}>Advantage</button>
-                <button onClick={()=> modifyScore(-1)}>Penalty</button>
-                <button onClick={() => setScore(0)}>Clear Score</button>
+                <button onClick={()=> modifyScore(1)} className="advantage">Advantage</button>
+                <button onClick={()=> modifyScore(-1)} className="penalty">Penalty</button>
             </div>
         </div>
     )

@@ -13,7 +13,7 @@ function MyTimer({ expiryTimestamp }) {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <div style={{fontSize: '100px'}}>
+      <div style={{fontSize: '75px'}}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
       <button onClick={start}>Start</button>
@@ -27,12 +27,11 @@ function MyTimer({ expiryTimestamp }) {
 
 function Timer (props) {
     const time = new Date();
-    console.log(props.time)
     time.setSeconds(time.getSeconds() + props.time);
 
   return (
     <div>
-      {props.timeSet && <MyTimer expiryTimestamp={time} />}
+      <MyTimer expiryTimestamp={time} />
     </div>
   );
 }
