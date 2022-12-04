@@ -8,7 +8,6 @@ import React from 'react'
 
 function App() {
 
-  //start block 1
   const initialFormData = Object.freeze({
     player1: "Player 1",
     player2: "Player 2",
@@ -18,6 +17,7 @@ function App() {
 const [formData, setFormData] = React.useState(initialFormData)
 
 const [activeGame, setActiveGame] = React.useState(false)
+
 
 function handleChange (event) {
     setFormData({

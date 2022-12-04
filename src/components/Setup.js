@@ -14,7 +14,7 @@ function Setup (props) {
                 <input type="text" name="player2" onChange={props.handleChange} />
             </label>
             <label className='time'>
-                <h3>Time (in minutes):</h3>
+                <h3>Time <span>(in minutes)</span>:</h3>
                 <label><input type="radio" value="60" name="time" onChange={props.handleChangeNumber}/> 1 </label>
                 <label><input type="radio" value="120" name="time" onChange={props.handleChangeNumber} />2 </label>
                 <label><input type="radio" value="180" name="time" onChange={props.handleChangeNumber}/> 3 </label>

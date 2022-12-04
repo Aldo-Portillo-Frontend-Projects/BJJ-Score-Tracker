@@ -11,8 +11,10 @@ function Game (props) {
             
             <Timer time={props.time} timeSet={props.timeSet}/>
 
-            <Player player={props.player1} />
-            <Player player={props.player2} />
+            <div className='player-conatiner'> 
+                <Player player={props.player1} />
+                <Player player={props.player2} />
+            </div>
     
             <button onClick={props.newGame} className="new-game-button">New Game</button>
         </div>
