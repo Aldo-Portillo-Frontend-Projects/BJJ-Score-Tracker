@@ -9,7 +9,7 @@ export default function Player(props) {
         })
     }
     return ( 
-        <div className='playerContainer'>
+        <div className={`playerContainer ${props.playerNumber}`}>
             <h3>{props.player}</h3>
             <h2>{score}</h2>
             <div className='point-buttons'>

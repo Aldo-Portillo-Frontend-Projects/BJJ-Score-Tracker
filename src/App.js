@@ -50,7 +50,7 @@ function newGame(){
       <h1>BJJ Score Tracker</h1>
       {!activeGame && <Setup handleChange={handleChange} handleChangeNumber={handleChangeNumber} handleSubmit={handleSubmit}  />}
       {activeGame && <Game player1 = {formData.player1} player2={formData.player2} time={formData.time} newGame={newGame}/>}
-      
+      <footer>BJJScore &copy; Aldo Portillo 2022</footer>
     </div>
   );
 }
