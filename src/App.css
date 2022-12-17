@@ -149,6 +149,7 @@ form > .time > h3 > span {
   }
 }
 
-footer{
+footer > a{
   color: #c5c5c5;
+  text-decoration: none;
 }
